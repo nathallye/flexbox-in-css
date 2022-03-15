@@ -3,7 +3,6 @@
 ## Introdução ao Flex Box
 Foi projetado como um modelo de layout unidimensional e como um método que pode oferecer distribuição de espaço entre itens em uma interface e recursos de alinhamento.
 
-
 ### Flex Container
 É a tag que envolve os itens, será nela que iremos aplicar a propriedade "display: flex". Transforma todos os seus itens filhos em flex itens.
 Como está ilustrado na imagem: 
@@ -20,7 +19,6 @@ Vale resaltar que essa propriedade de display/ essa inicialização de container
 - align-items: alinha os itens de acordo com o eixo do container
 - align-content: alinha as linhas do container
 
-
 ### Flex Item
 São os elementos filhos diretos do Flex Container. E também podem se tornar Flex Container.
 
@@ -31,3 +29,17 @@ São os elementos filhos diretos do Flex Container. E também podem se tornar Fl
 - flex: é uma abreviação para definir o flex-grow, flex-basis e flex-shrink
 - order: define a ordem de distribução e listagem dos itens 
 - align-self: define o alinhamento de um item especifico do container
+
+## Fundamentos do Flex Box
+
+### Display: flex
+Torna a tag um elemento do tipo flex container, e assim automaticamente todos os seus filhos diretos desta tag, tornam-se em flex items.
+
+
+
+
+
+
+
+
+
