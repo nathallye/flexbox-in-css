@@ -35,7 +35,9 @@ São os elementos filhos diretos do Flex Container. E também podem se tornar Fl
 ### Display: flex
 Torna a tag um elemento do tipo flex container, e assim automaticamente todos os seus filhos diretos desta tag, tornam-se em flex items.
 
+- Os flex items acupam todo o espaço da sua div(da sua caixa):
 
+- A aplicação do display-flex faz com que os items do container pai(onde foi aplicado o display-flex) ele passa a ocupar o maximo do seu conteúdo e se abrigando dentro desse container, respeitando a orientação em linha:
 
 
 
