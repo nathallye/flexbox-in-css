@@ -62,7 +62,7 @@ _Obs.:_
 <img width="300" src="/img/6.jpg"/>
 
 > Por padrão a div sem nenhuma propriedade aplicada, alinha seus elementos em linha/horizontal. 
-<img width="280" src="/img/5.jpg"/>
+<img width="300" src="/img/5.jpg"/>
 
 - **column:** ordenação de cima para baixo, em coluna unica.
 
@@ -84,3 +84,7 @@ Por padrão eles não quebram linhas, isso faz com que os flex itens sejam compa
 <img width="300" src="/img/10.jpg"/>
 
 - **wrap-reverse:** permite a quebra de linha assim que um dos flex itens não puder mais ser compactado, porém na direção contrária da linha, acima.
+
+### Flex-flow
+É um atalho para as propriedades **flex-direction** e **flex-wrap**.
+Porém _seu uso não é tão comum_, visto que, quando mudamos o flex-direction para column, mantemos o padrão do flex-wrap que é nowrap.

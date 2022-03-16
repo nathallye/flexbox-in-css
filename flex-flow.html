@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fundamentos - flex flow</title>
+
+  <style>
+    .flex-container{
+      display: flex;
+      /*apenas estilização não influencia*/
+      border: 2px solid black;
+    }
+
+    .default{
+      flex-flow: row nowrap;
+    }
+
+    .row-wrap{
+      flex-flow: row wrap;
+    }
+
+    .row-wrap-reverse{
+      flex-flow: row wrap-reverse;
+    }
+
+    .row-reverse-nowrap{
+      flex-flow: row-reverse nowrap;
+    }
+
+    .row-reverse-wrap{
+      flex-flow: row-reverse wrap;
+    }
+
+    .row-reverse-wrap-reverse{
+      flex-flow: row-reverse wrap-reverse;
+    }
+
+    .item{
+      /*apenas estilização não influencia*/
+      background-color: blueviolet;
+      margin: 5px;
+      color: white;
+      text-align: center;
+      width: 100px;
+      height: 50px;
+      line-height: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1> flex-flow com os valores padrão(flex-direction: row e flex-wrap: nowrap)</h1>
+
+  <div class="flex-container default">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+  </div><br><br>
+
+  <h1> flex-flow com o flex-direction: row e flex-wrap: wrap</h1>
+
+  <div class="flex-container row-wrap">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+  </div><br><br>
+
+  <h1> flex-flow com o flex-direction: row e flex-wrap: wrap-reverse</h1>
+
+  <div class="flex-container row-wrap-reverse">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+  </div><br><br>
+
+  <h1> flex-flow com o flex-direction: row-reverse e flex-wrap: nowrap</h1>
+
+  <div class="flex-container row-reverse-nowrap">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+  </div><br><br>
+
+  <h1> flex-flow com o flex-direction: row-reverse e flex-wrap: wrap</h1>
+
+  <div class="flex-container row-reverse-wrap">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+  </div><br><br>
+  
+  <div class="flex-container row-reverse-wrap-reverse">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+  </div><br><br>
+</body>
+</html>
