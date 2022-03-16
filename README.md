@@ -9,7 +9,7 @@ Como está ilustrado na imagem:
 
 <img width="300" src="/img/8.png"/>
 
-Vale resaltar que essa propriedade de display/ essa inicialização de container pode ser feita em qualquer tipo de tag, seja ela uma div, um spam, h1, h2, ou até mesmo um link (a), a partir do momento que essa tag possui itens filhos, ela é passivel de ser aplicada a propriedade "display-flex".
+Vale resaltar que essa propriedade de display/ essa inicialização de container pode ser feita em qualquer tipo de tag, seja ela uma div, um spam, h1, h2, ou até mesmo um link (a), a partir do momento que essa tag possui itens filhos, ela é passivel de ser aplicada a propriedade "display:flex".
 
 **Propriedades relacionadas:**
 - display: inicializador do container
@@ -41,12 +41,12 @@ Torna a tag um elemento do tipo flex container, e assim automaticamente todos os
 <img width="300" src="/img/1.jpg"/>
 
 
-- A aplicação do display-flex faz com que os items do container pai(onde foi aplicado o display-flex) ele passa a ocupar o maximo do seu conteúdo e se abrigando dentro desse container, respeitando a orientação em linha:
+- A aplicação do display:flex faz com que os items do container pai(onde foi aplicado o display:flex) ele passa a ocupar o maximo do seu conteúdo e se abrigando dentro desse container, respeitando a orientação em linha:
 
 <img width="300" src="/img/3.jpg"/>
 
 _Obs.:_ 
-- Antes da aplicação do display-flex, foi aplicado na div pai algumas propriedades para facilitar essa visualização, propriedades de max-width, border solid e padding:
+- Antes da aplicação do display:flex, foi aplicado na div pai algumas propriedades para facilitar essa visualização, propriedades de max-width, border solid e padding:
 
 <img width="300" src="/img/2.jpg"/>
 
