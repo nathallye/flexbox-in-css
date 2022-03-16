@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fundamentos - aling items</title>
+
+  <style>
+    .flex-container{
+      display: flex;
+      /*apenas estilização não influencia*/
+      border: 2px solid black;
+      margin: 0;
+      max-width: 350px;
+    }
+
+    .column{
+      flex-direction: column;
+    }
+
+    .item{ 
+      /*apenas estilização não influencia*/
+      background-color: blueviolet;
+      margin: 5px;
+      text-align: center;
+      color: white;
+      /*vai ser estudo mais a frente, mas ele trata a distribuição dos items*/
+      flex: 1; 
+    }
+
+    .align-items-flex-start{
+      align-items: flex-start;
+    }
+
+    .align-items-flex-end{
+      align-items: flex-end;
+    }
+
+    .align-items-center{
+      align-items: center;
+    }
+
+    .align-items-stretch{
+      align-items: stretch;
+    }
+
+    .align-items-baseline{
+      align-items: baseline;
+    }
+
+    .central{
+      height: 300px;
+      justify-content: center;
+    }
+
+    .central .item{
+      flex: 0;
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Com o flex-direction: row</h1>
+
+  <h2>align items: flex-start</h2>
+
+  <section class="flex-container align-items-flex-start">
+    <div class="item">Item 1</div>
+    <div class="item">Lorem ipsum dolor sit amet</div>
+    <div class="item">Item 3 + Lorem ipsum dolor sit amet</div>
+  </section>
+
+  <h2>align items: flex-end</h2>
+
+  <section class="flex-container align-items-flex-end">
+    <div class="item">Item 1</div>
+    <div class="item">Lorem ipsum dolor sit amet</div>
+    <div class="item">Item 3 + Lorem ipsum dolor sit amet</div>
+  </section>
+
+  <h2>align items: center</h2>
+
+  <section class="flex-container align-items-center">
+    <div class="item">Item 1</div>
+    <div class="item">Lorem ipsum dolor sit amet</div>
+    <div class="item">Item 3 + Lorem ipsum dolor sit amet</div>
+  </section>
+
+  <h2>align items: stretch</h2>
+
+  <section class="flex-container align-items-stretch">
+    <div class="item">Item 1</div>
+    <div class="item">Lorem ipsum dolor sit amet</div>
+    <div class="item">Item 3 + Lorem ipsum dolor sit amet</div>
+  </section>
+
+  <h2>align items: baseline</h2>
+
+  <section class="flex-container align-items-baseline">
+    <div class="item"><br>Item 1</div>
+    <div class="item">Lorem ipsum dolor sit amet</div>
+    <div class="item">Item 3 + Lorem ipsum dolor sit amet</div>
+  </section><br>
+
+  <!-- ######################################## -->
+  <h1>Com o flex-direction: column</h1>
+
+  <h2>align items: flex-start</h2>
+
+  <section class="flex-container column align-items-flex-start">
+    <div class="item">Item 1</div>
+    <div class="item">Lorem ipsum dolor sit amet</div>
+    <div class="item">Item 3 + Lorem ipsum dolor sit amet</div>
+  </section>
+
+  <h2>align items: flex-end</h2>
+
+  <section class="flex-container column align-items-flex-end">
+    <div class="item">Item 1</div>
+    <div class="item">Lorem ipsum dolor sit amet</div>
+    <div class="item">Item 3 + Lorem ipsum dolor sit amet</div>
+  </section>
+
+  <h2>align items: center</h2>
+
+  <section class="flex-container column align-items-center">
+    <div class="item">Item 1</div>
+    <div class="item">Lorem ipsum dolor sit amet</div>
+    <div class="item">Item 3 + Lorem ipsum dolor sit amet</div>
+  </section>
+
+  <h2>align items: stretch</h2>
+
+  <section class="flex-container column align-items-stretch">
+    <div class="item">Item 1</div>
+    <div class="item">Lorem ipsum dolor sit amet</div>
+    <div class="item">Item 3 + Lorem ipsum dolor sit amet</div>
+  </section>
+
+  <h2>align items: baseline</h2>
+
+  <section class="flex-container column align-items-baseline">
+    <div class="item"><br>Item 1</div>
+    <div class="item">Lorem ipsum dolor sit amet</div>
+    <div class="item">Item 3 + Lorem ipsum dolor sit amet</div>
+  </section><br>
+
+  <!-- ######################################## -->
+  <h1>Alinhando elementos ao centro da tela</h1>
+  
+  <section class="container align-items-center central">
+    <div class="item">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pharetra mauris non nunc ullamcorper dapibus. Maecenas purus risus, congue ac viverra non, iaculis a metus.
+    </div>
+  </section>
+  
+</body>
+</html>
