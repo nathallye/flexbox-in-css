@@ -212,3 +212,54 @@ _Obs:_ _justify-content não irá funcionar_ caso tenhamos adicionado ao nosso f
 - **auto:** caso o item não tenha tamanho, este será proporcional ao conteúdo do item;
 - **px, %, em, ...:** são valores exatos previamente definidos;
 - **0 (zero):** terá relação com a definição do flex-grow.
+
+#### Flex-shrink
+É a propriedade que estabelecer a capacidade de redução compressão do tamanho de um item.
+
+``` CSS
+.flex-item {
+  flex-shrink: <número>; /* o valor padrão é 0 */
+}
+```
+
+#### Flex
+Esta propriedade é um atalho ou abreviação de escrita para as propriedades: **grow**, **shrink** e **basis**.
+
+``` CSS
+.flex-item {
+  flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]; /* os valores padrão são 0 1 auto*/
+}
+```
+
+#### Order
+Determina a ordem em que os elementos aparecerão.
+
+<img width="400" src="/img/19.png"/>
+
+Por padrão os flex items são dispostos na tela na ordem do código. Mas a propriedade order controla a ordem em que aparecerão no container.
+
+``` CSS
+.flex-item {
+  order: <número>; /* o valor padrão é 0 */
+}
+```
+
+#### Align-self
+É a propriedade que estabelece o alinhamento de modo individual sobre um determinado item. 
+Necessário que o container não tenha um _align-items_ definido.
+
+<img width="400" src="/img/20.png"/>
+
+``` CSS
+.flex-item {
+  align-self: auto | flex-start | flex-end | center | baseline | stretch;
+}
+```
+**Valores possíveis:**
+- **auto:** valor padrão, irá respeitar a definição de _align-items_ do container;
+- **flex-start:** alinha o item ao início do container;
+- **flex-end:** alinha o item ao final do container;
+- **center:** relativo ao centro de acordo com o eixo;
+- **stretch:** ocupa todo os espaço relativo;
+- **baseline:** utiliza a linha base da tipografia.
+

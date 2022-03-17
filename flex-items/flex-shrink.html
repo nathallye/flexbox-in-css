@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fundamentos - flex shrink</title>
+
+  <style>
+    .flex-container{
+      display: flex;
+      /*apenas estilização não influencia*/
+      max-width: 350px;
+      border: 2px solid black;
+    }
+
+    .flex-item{
+      /*apenas estilização não influencia*/
+      background-color: cadetblue;
+      margin: 5px;
+      font-size: 24px;
+      text-align: center;
+      color: white;
+    }
+
+    .flex-shrink-0{
+      flex-shrink: 0; /*Não permite a compressão dos itens*/
+      flex-basis: 100px; /*e esses itens tem um tamanho minimo de 100px de width*/
+    }
+
+    .flex-shrink-1{
+      flex-shrink: 1;
+    }
+
+    .flex-shrink-2{
+      flex-shrink: 2;
+      flex-basis: 100px;
+    }
+
+    .flex-shrink-3{
+      flex-shrink: 3;
+      flex-basis: 100px;
+    }
+
+    .flex-grow-1{
+      flex-grow: 1;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <h2>flex shrink: 1 e flex-grow: 1</h2>
+
+  <div class="flex-container">
+    <div class="flex-item flex-shrink-1 flex-grow-1">A</div>
+    <div class="flex-item flex-shrink-1 flex-grow-1">B</div>
+    <div class="flex-item flex-shrink-1 flex-grow-1">C</div>
+    <div class="flex-item flex-shrink-1 flex-grow-1">D</div>
+    <div class="flex-item flex-shrink-1 flex-grow-1">E</div>
+  </div>
+
+  <div class="flex-container">
+    <div class="flex-item flex-shrink-1 flex-grow-1">A</div>
+    <div class="flex-item flex-shrink-1 flex-grow-1">hereeeeeeeeeee</div>
+    <div class="flex-item flex-shrink-1 flex-grow-1">C</div>
+    <div class="flex-item flex-shrink-1 flex-grow-1">D</div>
+    <div class="flex-item flex-shrink-1 flex-grow-1">E</div>
+  </div>
+  
+  <h2>flex shrink: 0(não permite redução), flex-basis: 1 e flex-grow-1</h2>
+
+  <div class="flex-container">
+    <div class="flex-item flex-shrink-0 flex-grow-1">A</div>
+    <div class="flex-item flex-shrink-0 flex-grow-1">heeeeeere</div>
+    <div class="flex-item flex-shrink-0 flex-grow-1">C</div>
+    <div class="flex-item flex-shrink-0 flex-grow-1">D</div>
+  </div>
+
+  <h2>flex shrink: 0, 1, 2 e 3 e flex-grow-1</h2>
+
+  <div class="flex-container">
+    <div class="flex-item flex-shrink-0 flex-grow-1">A</div>
+    <div class="flex-item flex-shrink-1 flex-grow-1">heeeeeeeeeeeere</div>
+    <div class="flex-item flex-shrink-2 flex-grow-1">C</div>
+    <div class="flex-item flex-shrink-3 flex-grow-1">D</div>
+  </div>
+
+</body>
+</html>

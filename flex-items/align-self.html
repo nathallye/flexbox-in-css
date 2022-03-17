@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <title>Fundamentos - align self</title>
+</head>
+
+<style>
+  .flex-container{
+      display: flex;
+      /*apenas estilização não influencia*/
+      max-width: 350px;
+      margin-bottom: 20px;
+      border: 2px solid black;
+      align-items: center;
+  }
+
+  .flex-container-com-align-items{
+      display: flex;
+      /*apenas estilização não influencia*/
+      max-width: 350px;
+      margin-bottom: 20px;
+      border: 2px solid black;
+      align-items: center;
+  }
+
+  .flex-item{
+    flex: 1;
+    /*apenas estilização não influencia*/
+    background-color: coral;
+    margin: 5px;
+    font-size: 24px;
+    text-align: center;
+    color: white;
+  }
+
+  .align-self-auto{
+    align-self: auto;
+  }
+
+  .align-self-flex-start{
+    align-self: flex-start;
+  }
+
+  .align-self-flex-end{
+    align-self: flex-end;
+  }
+
+  .align-self-center{
+    align-self: center;
+  }
+
+  .align-self-stretch{
+    align-self: stretch;
+  }
+
+  .align-self-baseline{
+    align-self: baseline;
+  }
+
+</style>
+<body>
+
+  <h2>align-self: auto</h2>
+
+  <div class="flex-container-com-align-items">
+    <div class="flex-item align-items-auto">123</div>
+    <div class="flex-item align-items-auto">AAA</div>
+    <div class="flex-item align-items-auto">lorem ipsum, here</div>
+    <div class="flex-item align-items-auto">hereeeeeeee</div>
+  </div>
+
+  <h2>align-self: flex-start </h2>
+
+  <div class="flex-container">
+    <div class="flex-item align-self-flex-start">123</div>
+    <div class="flex-item align-self-flex-start">AAA</div>
+    <div class="flex-item align-self-flex-start">lorem ipsum, here</div>
+    <div class="flex-item align-self-flex-start">hereeeeeeee</div>
+  </div>
+
+  <h2>align-self: flex-end</h2>
+
+  <div class="flex-container">
+    <div class="flex-item align-self-flex-end">123</div>
+    <div class="flex-item align-self-flex-end">AAA</div>
+    <div class="flex-item align-self-flex-end">lorem ipsum, here</div>
+    <div class="flex-item align-self-flex-end">hereeeeeeee</div>
+  </div>
+
+  <h2>align-self: flex-center</h2>
+
+  <div class="flex-container">
+    <div class="flex-item align-self-flex-center">123</div>
+    <div class="flex-item align-self-flex-center">AAA</div>
+    <div class="flex-item align-self-flex-center">lorem ipsum, here</div>
+    <div class="flex-item align-self-flex-center">hereeeeeeee</div>
+  </div>
+
+  <h2>align-self: stretch</h2>
+
+  <div class="flex-container">
+    <div class="flex-item align-self-stretch">123</div>
+    <div class="flex-item align-self-stretch">AAA</div>
+    <div class="flex-item align-self-stretch">lorem ipsum, here</div>
+    <div class="flex-item align-self-stretch">hereeeeeeee</div>
+  </div>
+
+  <h2>align-self: baseline</h2>
+
+  <div class="flex-container">
+    <div class="flex-item align-self-baseline">123</div>
+    <div class="flex-item align-self-baseline">AAA</div>
+    <div class="flex-item align-self-baseline">lorem ipsum, here</div>
+    <div class="flex-item align-self-baseline">hereeeeeeee</div>
+  </div>
+
+  <h2>align-self: mix</h2>
+
+  <div class="flex-container">
+    <div class="flex-item align-self-flex-start">123</div>
+    <div class="flex-item align-self-flex-end">AAA</div>
+    <div class="flex-item align-self-flex-center">lorem ipsum, here</div>
+    <div class="flex-item align-self-baseline">hereee</div>
+    <div class="flex-item align-self-stretch">BBB</div>
+  </div>
+
+</body>
+</html>
