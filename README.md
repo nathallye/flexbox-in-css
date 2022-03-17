@@ -36,14 +36,21 @@ São os elementos filhos diretos do Flex Container. E também podem se tornar Fl
 ## Fundamentos do Flex Box 
 ### Propriedades relacionadas ao Flex Container
 <img width="400" src="/img/13.png"/>
+
 #### Display: flex
 Torna a tag um elemento do tipo flex container, e assim automaticamente todos os seus filhos diretos desta tag, tornam-se em flex items.
+
+``` CSS
+.container {
+  display: flex; /* or inline-flex */
+}
+```
 
 - Os flex items acupam todo o espaço da sua div(da sua caixa):
 
 <img width="400" src="/img/1.jpg"/>
 
-- A aplicação do display:flex faz com que os items do container pai(onde foi aplicado o display:flex) ele passa a ocupar o maximo do seu conteúdo e se abrigando dentro desse container, respeitando a orientação em linha:
+- A aplicação do _display:flex_ faz com que os items do container pai(onde foi aplicado o display:flex) ele passa a ocupar o maximo do seu conteúdo e se abrigando dentro desse container, respeitando a orientação em linha:
 
 <img width="400" src="/img/3.jpg"/>
 
@@ -54,6 +61,12 @@ _Obs.:_
 
 #### Flex-direction
 É a propriedade que estabelece o eixo principal do container, definindo assim a direção que os flex items são colocados no flex container.
+
+``` CSS
+.flex-container {
+  flex-direction: row | row-reverse | column | column-reverse;
+}
+```
 
 **Eixos:**
 
@@ -77,6 +90,12 @@ _Obs.:_
 linha. 
 Por padrão eles não quebram linhas, isso faz com que os flex itens sejam compactados além do limite do conteúdo.
 
+``` CSS
+.flex-container {
+  flex-wrap: nowrap | wrap | wrap-reverse;
+}
+```
+
 - **nowrap (padrão)**, não permite a quebra de linha;
 
 <img width="400" src="/img/9.jpg"/>
@@ -91,10 +110,22 @@ Por padrão eles não quebram linhas, isso faz com que os flex itens sejam compa
 É um atalho para as propriedades **flex-direction** e **flex-wrap**.
 Porém _seu uso não é tão comum_, visto que, quando mudamos o flex-direction para column, mantemos o padrão do flex-wrap que é nowrap.
 
+``` CSS
+.flex-container {
+  flex-flow: row nowrap | row wrap | column nowrap | column wrap;
+}
+```
+
 #### Justify-Content
 Essa propriedade vai se encarregar de alinhar os itens dentro do container de acordo com a direção pretendida e tratar da distribuição de espaçamento entre eles.
 
-_Obs:_ caso seus itens esteja ocupando 100% de todo o container, ela não se aplica
+_Obs:_ caso seus itens esteja ocupando 100% de todo o container, ela não se aplica.
+
+``` CSS
+.flex-container {
+  justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly;
+}
+```
 
 **Variações:**
 - **flex-start:** faz o alinhamento no início do container;
@@ -111,6 +142,12 @@ O alinhamento é diferente para quando os itens estão em colunas(vertical) ou l
 Permite o alinhamento central no eixo vertical(no meio da tela).
 A direferença entre o justify-content é que ele não vai precisar necessiariamente ter conhecimento da altura dos itens filhos do container.
 
+``` CSS
+.flex-container {
+  align-items: stretch | flex-start | flex-end | center | baseline;
+}
+```
+
 **Tipos de alinhamento:**
 - **flex-start:** alinhamento dos itens no início;
 - **flex-end:** alinhamento dos itens no final;
@@ -124,8 +161,14 @@ A direferença entre o justify-content é que ele não vai precisar necessiariam
 É a propriedade responsável por tratar o alinhamento das linhas do container em relação ao eixo vertical do container.
 
 Precisamos que:
-- 0 container utilize quebra de linhas (flex-wrap: wrap);
+- O container utilize quebra de linhas (flex-wrap: wrap);
 - A altura do container seja maior que a soma das linhas dos itens.
+
+``` CSS
+.flex-container {
+  align-content: flex-start | flex-end | center | space-between | space-around | stretch;
+}
+```
 
 **Tipos de alinhamento:**
 - **flex-start:** alinhamento dos itens no início;
@@ -138,3 +181,34 @@ maiores que o inicial e final;
 
 <img width="400" src="/img/17.png"/>
 
+### Propriedades relacionadas aos Flex Items
+
+<img width="400" src="/img/12.png"/>
+
+#### Flex-grow
+Define a proporcionalidade de crescimentos dos itens, respeitando o tamanho de seus conteúdos internos.
+
+_Obs:_ _justify-content não irá funcionar_ caso tenhamos adicionado ao nosso flex container.
+
+<img width="400" src="/img/18.png"/>
+
+``` CSS
+.flex-item {
+  flex-grow: <numero>; /* o valor default(padrão) é 0 */
+}
+```
+
+#### Flex-basis
+É a propriedade que estabelece o tamanho inicial do item antes das distribuição de espaço restante dentro dele, usando como base o conteúdo interno disposto.
+
+``` CSS
+.flex-item {
+  flex-basis: auto /* default */
+          or <width>
+}
+```
+
+**Valores possíveis:**
+- **auto:** caso o item não tenha tamanho, este será proporcional ao conteúdo do item;
+- **px, %, em, ...:** são valores exatos previamente definidos;
+- **0 (zero):** terá relação com a definição do flex-grow.
