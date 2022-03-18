@@ -30,7 +30,7 @@ São os elementos filhos diretos do Flex Container. E também podem se tornar Fl
 - **flax-basis:** define o tamanho inicial do item antes da distribuição do espaço restante dentro do container;
 - **flex-shrink:** define a capacidade de redução;
 - **flex:** é uma abreviação para definir o flex-grow, flex-basis e flex-shrink;
-- order: define a ordem de distribução e listagem dos itens; 
+- **order:** define a ordem de distribução e listagem dos itens; 
 - **align-self:** define o alinhamento de um item especifico do container.
 
 ## Fundamentos do Flex Box 
